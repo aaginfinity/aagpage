@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD System</title>
+    <!--*************************** fontawesome *****************************-->
+    <link rel="stylesheet" href="css/all.min.css">
+    <!--*************************** bootstrap *****************************-->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!--*************************** style *****************************-->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container w-75">
+        <h2 class="fw-bolder text-center my-4">Product Management System</h2>
+
+        <label for="productName">Product Name :</label>
+        <input oninput="validateProductName()" type="text" id="productName" class="w-100 form-control my-4">
+
+        <label for="productPrice">Product Price :</label>
+        <input type="number" id="productPrice" class="w-100 form-control my-4">
+
+        <label for="productCategory">Product Category :</label>
+        <input type="text" id="productCategory" class="w-100 form-control my-4">
+
+        <label for="productDescription">Product Description :</label>
+        <textarea id="productDescription" class="w-100 form-control my-4"></textarea>
+
+        <button class="btn btn-outline-info d-inline-block" id="addBtn" onclick="addProduct()"> Add Product</button>
+
+        <button class="btn btn-outline-info d-none" id="updateBtn" onclick="updateProductByButton()"> Update </button>
+<!--* * * * * * *  ** * * **  * * * * * * * * * * Display Product Data * * **  ** *  * ** *  ** *  ** -->
+        <input oninput="searchProduct(this.value)" type="search" placeholder="Search" class="w-75 m-auto form-control my-5">
+        <table class="w-100 my-5 table" >
+            <thead>
+                <th>Index</th>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Category</th>
+                <th>Description</th>
+                <th>Update</th>
+                <th>Delete</th>
+            </thead>
+            <tbody id="tableData">
+                
+            </tbody>
+        </table>
+    </div>
+
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
